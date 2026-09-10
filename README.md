@@ -12,7 +12,7 @@ This is a static site (no build). From the repo root:
 python3 -m http.server 4173
 ```
 
-Then open http://localhost:4173. Paste SVG markup and click **Create shareable link**.
+Then open http://localhost:4173. Home is a paste box only. **Create shareable link** opens the `?s=` viewer (rendered + read-only source). **New SVG** and the title return to `/`.
 
 Any other static server also works (`npx serve .`, Caddy, nginx, Vercel).
 

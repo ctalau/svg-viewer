@@ -13,10 +13,10 @@
   </head>
   <body>
     <header class="topbar">
-      <a class="brand" href="./" id="home-link">SVG Viewer</a>
+      <a class="brand" href="./">SVG Viewer</a>
       <div class="actions" id="viewer-actions" hidden>
         <button type="button" class="btn" id="copy-link">Copy link</button>
-        <button type="button" class="btn btn-ghost" id="edit-again">Edit</button>
+        <a class="btn btn-ghost" href="./">New SVG</a>
       </div>
     </header>
 
@@ -46,7 +46,7 @@
         </section>
         <section class="panel">
           <h2>Source</h2>
-          <pre id="text-pane" class="text-pane" tabindex="0"></pre>
+          <pre id="text-pane" class="text-pane" tabindex="0" aria-readonly="true"></pre>
         </section>
       </div>
     </main>
