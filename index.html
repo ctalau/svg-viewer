@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>SVG Viewer</title>
+    <meta
+      name="description"
+      content="Paste an SVG, get a shareable dual-pane viewer link."
+    />
+    <link rel="icon" href="favicon.svg" type="image/svg+xml" />
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header class="topbar">
+      <a class="brand" href="./" id="home-link">SVG Viewer</a>
+      <div class="actions" id="viewer-actions" hidden>
+        <button type="button" class="btn" id="copy-link">Copy link</button>
+        <button type="button" class="btn btn-ghost" id="edit-again">Edit</button>
+      </div>
+    </header>
+
+    <main id="editor" class="editor">
+      <label class="sr-only" for="svg-input">SVG markup</label>
+      <textarea
+        id="svg-input"
+        class="paste"
+        spellcheck="false"
+        placeholder="Paste raw SVG markup here…"
+        autofocus
+      ></textarea>
+      <div class="editor-bar">
+        <p id="editor-error" class="error" role="alert" hidden></p>
+        <button type="button" class="btn btn-primary" id="share">
+          Create shareable link
+        </button>
+      </div>
+    </main>
+
+    <main id="viewer" class="viewer" hidden>
+      <p id="viewer-error" class="banner error" role="alert" hidden></p>
+      <div class="panels">
+        <section class="panel">
+          <h2>Rendered</h2>
+          <div id="render-pane" class="render-pane" aria-label="Rendered SVG"></div>
+        </section>
+        <section class="panel">
+          <h2>Source</h2>
+          <pre id="text-pane" class="text-pane" tabindex="0"></pre>
+        </section>
+      </div>
+    </main>
+
+    <script src="app.js"></script>
+  </body>
+</html>
