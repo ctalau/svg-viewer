@@ -77,6 +77,8 @@ body {
 
 .btn {
   appearance: none;
+  display: inline-flex;
+  align-items: center;
   border: 1px solid var(--border);
   background: var(--surface-2);
   color: var(--text);
@@ -85,6 +87,7 @@ body {
   padding: 0.5rem 0.9rem;
   border-radius: 8px;
   cursor: pointer;
+  text-decoration: none;
 }
 
 .btn:hover,
